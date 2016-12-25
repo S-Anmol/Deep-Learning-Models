@@ -2,10 +2,10 @@ from numpy import *
 seterr(all='ignore')
 
 def sigmoid(x):
-    return 1. / (1 + exp(-x))
+    return 1.0 / (1 + exp(-x))
 
 def dsigmoid(x):
-    return x * (1. - x)
+    return x * (1.0 - x)
 
 def gaussian(x, mean=0.0, scale=1.0):
     s = 2 * numpy.power(scale, 2)
@@ -16,10 +16,10 @@ def tanh(x):
     return numpy.tanh(x)
 
 def dtanh(x):
-    return 1. - x * x
+    return 1.0 - x * x
 
 def RELU(x):
     return x * (x > 0)
 
 def dRELU(x):
-    return 1. * (x > 0)
+    return 1.0 * (x > 0)
